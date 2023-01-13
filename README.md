@@ -25,3 +25,6 @@ PS: (I had to develop it on my friends linux machine as my mac wasnot allowing m
 
 # #7 Task(Response Check)
 For this task i am using `https://httpstat.us` with random status code b/w [200,500], The reason to do so is to randomize request so that it can actually get either 200 or 500 status code.
+# #8 Task(Regex)
+This task is done in one file, I have added a random true/false to create valid or invalid password.
+Code will run untill it prints a valid password. It will also print invalid passwords
