@@ -15,3 +15,6 @@ This task is written in ruby file, The main directory of this tasks `task_4` con
 # #6 Task(Create a duration)
 This is convert a file from PDF to PDF/A1-b format. I am using gs(Ghost Script) here assuming it is already installed in machine.
 PS: (I had to develop it on my friends linux machine as my mac wasnot allowing me to install GS)
+
+# #7 Task(Response Check)
+For this task i am using `https://httpstat.us` with random status code b/w [200,500], The reason to do so is to randomize request so that it can actually get either 200 or 500 status code.
