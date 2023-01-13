@@ -11,6 +11,8 @@ After deleting an item from list we can have two different approches to repositi
 1. Set position for all items
 2. Only update position for items which occur after the remove item in list
     This method will work good if we have a big dataset as we will not have to treverse from whole array again and again.
+For Rails and ActiveRecord Model callbacks will be used.
+I Have created a Model file for you to have a look if we actually have to implement in rails model.
 
 # #4 Task(Base64 to Image)
 This task is written in ruby file, The main directory of this tasks `task_4` contanins two directories and 1 ruby file. The  `modules` directory have required modules in it. The `root` directory have subdirectory `tmp` to store image file there as in this case we are assuming image is getting saved in Rails tmp directory. Since this is not written using Rails gem, this path is getting used, but in case of Rails you just need to write `Rails.root.join('tmp', 'image.png')`.

@@ -8,5 +8,5 @@ module XmlToHash
     }
     #need to handle a case if services is empty
     
-end
+  end
 end
