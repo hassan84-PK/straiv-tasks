@@ -6,7 +6,5 @@ module XmlToHash
       rate_plan: document.at_css("//RatePlanDescription").text.strip,
       services: document.xpath("//Services/Service").collect { |service| service.text.strip }.join(', ')
     }
-    #need to handle a case if services is empty
-    
   end
 end

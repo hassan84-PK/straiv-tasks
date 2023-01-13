@@ -5,7 +5,6 @@ require 'ostruct'
 include XmlFileReader
 include XmlToHash
 
-document =  read('data/xml_compressed.xml')
-#services nil
+document =  XmlFileReader.read('data/xml_compressed.xml')
 data_struct = OpenStruct.new(convert_to_hash(document))
 puts data_struct
