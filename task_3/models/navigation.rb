@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require './models/item'
 
 class Navigation
@@ -12,16 +14,24 @@ class Navigation
   end
 
   def destroy_item(name)
-    index = entries.find_index{|item| item.name == name}
+    index = entries.find_index { |item| item.name == name }
     return if index.nil?
 
     entries.delete_at(index)
-    entries[index..entries.length].each{|item| item.position -= 1 }
+    update_positions_after_deletion(index)
   end
 
   def show_info
-    entries.each do |item|
-      puts "ID: #{item.id}".ljust(9) + "Name: #{item.name}".ljust(27) + "Position: #{item.position}"
-    end
+    entries.each { |item| puts format_entry(item) }
+  end
+
+  private
+
+  def format_entry(item)
+    "ID: #{item.id}".ljust(9) + "Name: #{item.name}".ljust(27) + "Position: #{item.position}"
+  end
+
+  def update_positions_after_deletion(deleted_index)
+    entries[deleted_index..entries.length].each { |item| item.position -= 1 }
   end
 end
