@@ -12,7 +12,7 @@ end
 def generate_password(valid)
   password = generate_valid_password
   password += generate_valid_password until password.length >= 12
-  password += '!' unless valid
+  password += '!' unless valid # adding `!` makes passowrd invalid
   password
 end
 
@@ -21,7 +21,7 @@ def valid_password?(password)
   password.match?(PASSWORD_REGEX)
 end
 
-puts 'This program will break when a valid password is printed'
+puts 'This program will end when a valid password is printed'
 # Password Regex
 PASSWORD_REGEX = %r{^(?=.*[a-z])(?=.*[A-Z])(?=.*\d.*\d)(?=.*[%?@+\-_/.?;><])[a-zA-Z\d%?@+\-_/.?;><]{12,}$}.freeze
 password = ''
