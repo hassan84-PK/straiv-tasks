@@ -18,6 +18,9 @@ I Have created a Model file for you to have a look if we actually have to implem
 This task is written in ruby file, The main directory of this tasks `task_4` contanins two directories and 1 ruby file. The  `modules` directory have required modules in it. The `root` directory have subdirectory `tmp` to store image file there as in this case we are assuming image is getting saved in Rails tmp directory. Since this is not written using Rails gem, this path is getting used, but in case of Rails you just need to write `Rails.root.join('tmp', 'image.png')`.
 
 # #5 Task(Delete Duplicates)
+Added two approches for this task
+1. Simple ruby based solution, A class is created and using that class to store entries, then removing duplicated entries.
+2. Added a method which can be added in Rails Model to remove duplicate records.
 
 # #6 Task(Create a duration)
 This is convert a file from PDF to PDF/A1-b format. I am using gs(Ghost Script) here assuming it is already installed in machine.

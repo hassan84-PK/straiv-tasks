@@ -28,7 +28,7 @@ class Navigation
   private
 
   def format_entry(item)
-    "ID: #{item.id}".ljust(9) + "Name: #{item.name}".ljust(27) + "Position: #{item.position}"
+    "ID: #{item.id}\tName: #{item.name}\tPosition: #{item.position}"
   end
 
   def update_positions_after_deletion(deleted_index)
