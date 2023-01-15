@@ -4,7 +4,7 @@ require 'open3'
 
 input_file = 'Lorem_ipsum.pdf'
 output_file = 'output.pdf'
-# using ghost script command here, while keeoing in mind that machine have it installed already
+# using ghost script command here, assuming that machine have it installed already
 
 command = 'gs -sDEVICE=pdfwrite -dPDFACompatibilityPolicy=1 -dPDFSETTINGS'\
           "=/printer -dNOPAUSE -dQUIET -dBATCH -sOutputFile=#{output_file} #{input_file}"

@@ -10,7 +10,7 @@ class Table
   end
 
   def add_data(id, name)
-    data << Item.new(id, name, Time.now.strftime('%Y-%m-%d %H:%M:%S'))
+    data << Item.new(id, name, Time.now.utc.strftime('%Y-%m-%d %H:%M:%S'))
   end
 
   def print_table

@@ -14,6 +14,6 @@ values = %w[bed pillow bed pillow table bed
 
 print_result(sort_and_reverse_result(values.tally))
 
-# other approch which can be used is:
-puts '=' * 30
+# other approach which can be used is:
+puts 'Single Line Solution'
 print_result(values.tally.sort_by(&:last).reverse)

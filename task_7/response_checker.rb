@@ -4,8 +4,8 @@ require 'net/http'
 
 # https://httpstat.us/status_code will return response mentioned in request
 # So used it here for testing and development
-# in case there a case and i have to handle it for a url then url will be passed in request_server
-# method and random_url will be removed
+# if there is a case that i have to use actuall url then that url
+# will be passed in request_server. Method and random_url will be removed
 
 # added this to generate random url
 def random_url

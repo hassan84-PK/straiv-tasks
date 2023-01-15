@@ -19,13 +19,13 @@ module TextToImageDecoder
     path = 'root/tmp/'
     FileUtils.mkdir_p(path) unless File.directory?(path)
 
-    File.open("#{path}straiv.#{file_type}", 'wb').write(Base64.decode64(encoded_text))
+    File.write("#{path}straiv.#{file_type}", Base64.decode64(encoded_text))
 
-    puts "Image is created with at path #{path}straiv.#{file_type}"
+    puts "Image is created at path #{path}straiv.#{file_type}"
   end
 
   def read_data_from_file(text_file_path)
-    encoded_text = File.open(text_file_path, 'r').read
+    encoded_text = File.read(text_file_path)
     file_type = encoded_text[%r{/(.+);}, 1]
     encoded_text = encoded_text.split(',')[1]
     [file_type, encoded_text]
